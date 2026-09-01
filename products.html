@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMCOR - Products</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div id="app-shell-nav"></div>
+    <div class="main">
+      <div class="content">
+        <h2 class="page-title">Products & inventory</h2>
+
+        <div class="toolbar">
+          <input type="text" id="searchBox" placeholder="Search product or brand...">
+          <button class="btn-small" id="addProductBtn">+ Add product</button>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>ID</th><th>Product</th><th>Brand</th><th>Price</th><th>Stock</th><th>Status</th></tr></thead>
+            <tbody id="productsBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="productModal">
+    <div class="modal">
+      <h3>Add product</h3>
+      <form id="productForm">
+        <div class="field"><label>Name</label><input type="text" id="pName" required></div>
+        <div class="field"><label>Brand</label><input type="text" id="pBrand" required></div>
+        <div class="field"><label>Category</label><input type="text" id="pCategory"></div>
+        <div class="field"><label>Price</label><input type="number" id="pPrice" step="0.01" required></div>
+        <div class="field"><label>Cost</label><input type="number" id="pCost" step="0.01" required></div>
+        <div class="field"><label>Initial Stock</label><input type="number" id="pStock" required></div>
+        <div class="field"><label>Reorder Level</label><input type="number" id="pReorder" value="5" required></div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-cancel" id="cancelProductBtn">Cancel</button>
+          <button type="submit" class="btn">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="api.js"></script>
+  <script src="auth.js"></script>
+  <script src="nav.js"></script>
+  <script src="products.js"></script>
+</body>
+</html>

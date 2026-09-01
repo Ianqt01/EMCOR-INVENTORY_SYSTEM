@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMCOR - Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div id="app-shell-nav"></div>
+    <div class="main">
+      <div class="content">
+        <h2 class="page-title">Dashboard</h2>
+
+        <div class="stat-grid">
+          <div class="stat-card"><div class="label">Products</div><div class="value" id="statProducts">-</div></div>
+          <div class="stat-card"><div class="label">Total stock</div><div class="value" id="statStock">-</div></div>
+          <div class="stat-card"><div class="label">Low stock</div><div class="value" id="statLow">-</div></div>
+          <div class="stat-card"><div class="label">Total sales</div><div class="value" id="statSales">-</div></div>
+        </div>
+
+        <h2 class="page-title" style="font-size:14px;">Recent Transactions</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Date</th><th>Type</th><th>Product</th><th>Qty</th></tr></thead>
+            <tbody id="recentBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="api.js"></script>
+  <script src="auth.js"></script>
+  <script src="nav.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
